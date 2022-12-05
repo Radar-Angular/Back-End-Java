@@ -13,6 +13,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.annotations.UpdateTimestamp;
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 @Table(name = "tb_pedido")
@@ -26,7 +27,7 @@ public class Pedido {
 	private Double valorTotal;
 	
 
-	@UpdateTimestamp
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDateTime data;
 	
 	
